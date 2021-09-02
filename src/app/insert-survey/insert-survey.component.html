@@ -1,0 +1,22 @@
+
+<form (ngSubmit)="saveSurvey()">
+<th>Survey Topic</th>
+<div class="form-group">
+  <input
+    name="id"
+    [(ngModel)]= "surveytopic.topic"
+    placeholder="Survey topic"/>
+  </div>
+  
+  <th> Survey Question</th>
+  <div class="form-group">
+  <textarea  type="text"
+    name="answer"
+    [(ngModel)]= "surveytopic.surveyQuestion"
+    placeholder="Please Enter an answer" class="form-control col-md-12"> </textarea>
+  </div>
+
+
+  <button type="submit">Submit</button>
+
+</form>

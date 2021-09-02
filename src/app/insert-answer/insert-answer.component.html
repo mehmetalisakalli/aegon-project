@@ -1,0 +1,46 @@
+<form (ngSubmit)="saveSurveyAnswer()">
+ 
+
+  <th>Survey İd</th>
+  <div class="form-group" *ngFor="let a of [(surveytopic.id)]" >  
+      <span>{{a}}</span>
+    </div>
+    
+    <th>Survey Answer</th>
+    <div class="form-group">
+    <textarea  type="text"
+      name="answer"
+      [(ngModel)]= "surveyAnswer.answer"
+      placeholder="Enter survey answers" 
+      class="form-control col-md-12"> </textarea>
+    </div>
+    
+    <th>User Score</th>
+    <div class="form-group">
+      <select  type="select"
+      [(ngModel)]= "surveyAnswer.userScore"
+      name="answer"
+     
+      (change)="selectChangeHandler($event)"
+      placeholder="Select survey score">
+          
+        <option value="1">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+     
+    </select>
+   
+    </div>
+
+ 
+    <button type="submit">Send</button>
+
+</form>

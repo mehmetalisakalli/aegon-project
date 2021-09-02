@@ -1,0 +1,27 @@
+<h2>Survey Topics List</h2>
+
+<div class="col-md-4">
+    <input type="text"
+        [(ngModel)]="filters.keyword"
+        name="keyword"
+        (input)="listExpenses()" />
+</div>
+
+
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th>Answer İd</th>
+            <th>Answer</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let surveyanswers of surveyanswers">
+            <td>{{surveyanswers.id}}</td>
+            <td>{{surveyanswers.answer}}</td>
+            <td>{{surveyanswers.userScore}}</td>
+        </tr>
+    </tbody>
+</table>
+

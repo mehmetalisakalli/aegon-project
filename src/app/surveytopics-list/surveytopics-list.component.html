@@ -1,0 +1,17 @@
+<h2>Survey Topics List</h2>
+<table class= "table table-striped">
+    <thead>
+        <tr>
+            <th>Survey Topic</th>
+            <th>NPM Score</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let surveytopics of surveytopics">
+            <td>{{surveytopics.topic}}</td>
+            <td>{{surveytopics.npmScore}}</td>
+            <a routerLink="/answersurvey/{{surveytopics.id}}">Cevapla</a>
+        </tr>
+    </tbody>
+</table>
